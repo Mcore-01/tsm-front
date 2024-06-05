@@ -1,0 +1,10 @@
+<div class="column-container" [ngClass]="{'transparent-container': !isFormVisible}">
+    <form *ngIf="isFormVisible">
+        <textarea name="description" #textareaTitle [(ngModel)]="title" [rows]="2" required></textarea>
+        <div class="button-container">
+            <button class="accept-button" (click)="saveColumn()">Добавить колонку</button>
+            <button class="close-button" (click)="isFormVisible=!isFormVisible"><icon [iconUrl]="iconUrlClose" [width]="25" [height]="25"></icon></button>
+        </div>
+    </form>
+    <button *ngIf="!isFormVisible" class="open-add-form" [ngClass]="{'transparent-button': !isFormVisible}" (click)="showAddForm()">+ Добавить одну колонку</button>
+</div>

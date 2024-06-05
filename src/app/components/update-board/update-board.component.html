@@ -1,0 +1,10 @@
+<form>
+    <textarea
+        name="title"
+        [(ngModel)]="board.title"
+        (blur)="saveTodo()"
+        (keydown.enter)="onKeydown($event)"
+        (keyup.enter)="saveTodo()"
+        required>
+    </textarea>
+</form>

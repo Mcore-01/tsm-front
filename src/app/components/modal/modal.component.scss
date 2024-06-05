@@ -1,0 +1,35 @@
+.modal-background{
+    background-color: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 0;
+}
+
+.modal-window{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+
+    border-radius: 20px;
+    padding: 50px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    .button-container{
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+    }
+    .field-data {
+        width: 100%;
+    }
+
+}

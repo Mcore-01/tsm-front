@@ -1,0 +1,16 @@
+<div class="button-container">
+    <button mat-flat-button color="primary" (click)="downloadExcel()">Сохранить логи в Excel</button>
+</div>
+<ngx-charts-bar-vertical
+        [view]="view"
+         [results]="data"
+         [gradient]="gradient"
+         [xAxis]="showXAxis"
+         [yAxis]="showYAxis"
+         [legend]="showLegend"
+         [showXAxisLabel]="showXAxisLabel"
+         [showYAxisLabel]="showYAxisLabel"
+         [xAxisLabel]="xAxisLabel"
+         [yAxisLabel]="yAxisLabel"
+         [legendTitle]="legendTitle">
+</ngx-charts-bar-vertical>

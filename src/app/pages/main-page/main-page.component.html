@@ -1,0 +1,24 @@
+<header>
+    <user-profile></user-profile>
+
+    <div class="add-board-container">
+        <label>Доски</label>
+        <button mat-icon-button color="warn" (click)="addBoard()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+
+    <div class="board-container">
+        @for (board of boards; track board) {
+            <a class="board-item" routerLink='/main/board/{{board.id}}' routerLinkActive="active">{{board.title}}</a>
+        }
+    </div>
+
+    <div class="button-container">
+        <a class="open-stats-button" routerLink='/main/stats' routerLinkActive="active">Аналитика</a>
+    </div>
+</header>
+
+<div class="main">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,18 @@
+<div class="reg-form">
+    <h1>Регистрация</h1>
+    <mat-form-field class="field-data">
+        <mat-label>Имя пользователя</mat-label>
+        <input matInput [(ngModel)]="nameValue" type="text"  cdkFocusInitial>
+    </mat-form-field>
+    <mat-form-field class="field-data">
+        <mat-label>Логин</mat-label>
+        <input matInput [(ngModel)]="loginValue" type="text"  cdkFocusInitial>
+    </mat-form-field>
+    <mat-form-field class="field-data">
+        <mat-label>Пароль</mat-label>
+        <input matInput [(ngModel)]="passwordValue" type="password"  cdkFocusInitial>
+    </mat-form-field>
+    <h2 [hidden]="!invalidLogin">{{errorMessage}}</h2>
+    <button mat-flat-button color="primary" (click)="register()">Войти</button>
+    <a routerLink='/enter/auth' routerLinkActive="active">Авторизоваться?</a>
+</div>

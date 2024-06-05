@@ -1,0 +1,7 @@
+<form>
+    <textarea name="description" #textareaTodo [(ngModel)]="todo.description" required></textarea>
+    <div class="button-container">
+        <button (click)="saveTodo()"><icon [iconUrl]="iconUrlCheckBox" [width]="25" [height]="25"></icon></button>
+        <button (click)="close()"><icon [iconUrl]="iconUrlClose" [width]="20" [height]="20"></icon></button>
+    </div>
+</form>

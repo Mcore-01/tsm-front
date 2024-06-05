@@ -1,0 +1,71 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea{
+    border: 1px solid rgb(133, 184, 255);
+    border-radius: 10px;
+    padding: 5px;
+    resize: none;
+
+    font-size: 20px;
+}
+textarea:active{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+button{
+    border-style: none;
+    border-radius: 10px;
+}
+
+.column-container{
+    width: 20vw;
+    background-color: rgba(232, 225, 225, 1);
+    padding: 20px;
+    border-radius: 20px;
+
+
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.accept-button{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close-button{
+    background-color: rgba(232, 225, 225, 1);
+    padding: 10px;
+}
+
+.close-button:hover{
+    background-color: rgba(227, 184, 184, 0.62);
+}
+
+.accept-button:hover, .open-add-form:hover{
+    background-color: rgba(179, 237, 255, 0.25);
+}
+
+
+.open-add-form{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.transparent-container{
+    background-color: rgba(232, 225, 225, 0.38);
+}
+
+.transparent-button{
+    background-color: rgba(152, 157, 157, 0.29);
+}

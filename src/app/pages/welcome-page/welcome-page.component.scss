@@ -1,0 +1,82 @@
+@import "./../../primary-colors";
+
+:host{
+  display: grid;
+
+  grid-template-rows: 8% 1fr;
+  height: 100%;
+}
+
+header{
+  background-color: $header-bg-color;
+  border-bottom: 1px solid #454e59;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  h1, a{
+    margin: 0;
+    color: $main-text-color;
+  }
+
+  h1{
+    font-size: 50px;
+  }
+
+  a{
+    font-size: 30px;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+main {
+  background-color: $main-bg-color;
+
+  padding: 40px;
+  .info-about-service{
+
+    margin: 15vh 0 0 15vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h2{
+      color: $main-text-color;
+      font-size: 40px;
+    }
+
+    .auth-buttons{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a{
+        font-size: 20px;
+        color: #579dff;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      .reg-button{
+        background-color: #579dff;
+        border-style: none;
+        border-radius: 3px;
+
+        width: fit-content;
+        padding: 3px 10px;
+
+        color: $main-bg-color;
+
+        font-size: 25px;
+        &:hover{
+          background-color: #85b8ff;
+        }
+      }
+    }
+  }
+}

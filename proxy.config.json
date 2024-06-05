@@ -1,0 +1,7 @@
+{
+  "/TSM/**": {
+    "target":"http://localhost:5169/",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

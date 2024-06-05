@@ -1,0 +1,15 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, h7{
+    margin: 0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

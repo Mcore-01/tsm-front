@@ -1,0 +1,36 @@
+<div class="column-container">
+    <div class="title-column">
+        <h2>{{column.title}}</h2>
+        <button class="delete-column" (click)="deleteColumn(column.id)">
+            <icon [iconUrl]="iconUrlTrash" [width]="25" [height]="25"></icon>
+        </button>
+    </div>
+    <div cdkDropList class="todos-container" (cdkDropListDropped)="drop($event)">
+       @for(todo of todos; track todo){
+            @if(todo.id !== editedTodo){
+                <div class="todo-container" cdkDrag>
+                    <div class="todo" (click)="showEditField(todo.id)">{{todo.description}}</div>
+                    <button class="delete-todo" (click)="delete(todo.id)">
+                        <icon [iconUrl]="iconUrlTrash" [width]="25" [height]="25"></icon>
+                    </button>
+                </div>
+            }
+            @else if (todo.id === editedTodo){
+                <div class="todo-container">
+                    <update-todo [todo]="todo" (buttonCloseClick)="hideEditField(todo.id)"></update-todo>
+                </div>
+            }
+        }
+        <div class="add-todo-container">
+            @if(isAddFieldVisible){
+                <add-todo [columnID]="column.id"
+                          (buttonAddClick)="addTodo($event)"
+                          (buttonCloseClick)="isAddFieldVisible = !isAddFieldVisible">
+                </add-todo>
+            }
+            @else if (!isAddFieldVisible){
+                <button (click)="showAddField()" class="add-button">+ Добавить</button>
+            }
+        </div>
+    </div>
+</div>

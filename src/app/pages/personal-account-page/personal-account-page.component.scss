@@ -1,0 +1,36 @@
+@import "./../../primary-colors";
+:host{
+  height: 100%;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: $header-bg-color;
+
+  color: $main-text-color;
+
+  h1{
+    margin: 0;
+  }
+
+  .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #23f4ea;
+    color: #1d2125;
+    font-size: 60px;
+    display: grid;
+    place-items: center;
+  }
+
+  .nickname-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

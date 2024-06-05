@@ -1,0 +1,78 @@
+@import "./../../primary-colors";
+:host{
+    display: flex;
+    flex-direction: row;
+    color: $main-text-color;
+    height: 100%;
+}
+header{
+    background-color: $header-bg-color;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    font-size: 30px;
+    font-family: Calibri;
+
+    a{
+        color: $main-text-color;
+        text-decoration: none;
+        font-size: 30px;
+
+        &:hover{
+            background-color: rgb(59, 66, 66);
+        }
+        &.active {
+            color: #65ebd1;
+        }
+    }
+
+    .add-board-container{
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 30px;
+        margin: 0 0 0 10px;
+        padding: 0 10px 0 0;
+        label{
+            align-self: center;
+            font-family: "Calibri";
+            font-weight: bold;
+        }
+    }
+
+    .board-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+        padding: 10px 0;
+        .board-item{
+            padding: 5px 5px 5px 15px;
+            margin: 0;
+            cursor: pointer;
+            &:hover{
+                background-color: $main-hover-color;
+            }
+        }
+    }
+
+    .button-container{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+        padding: 10px 0;
+        .open-stats-button{
+            padding: 5px 5px 5px 15px;
+            margin: 0;
+            cursor: pointer;
+            &:hover{
+                background-color: $main-hover-color;
+            }
+        }
+    }
+}
+
+.main{
+    width: 100%;
+    background-image: inherit;
+}

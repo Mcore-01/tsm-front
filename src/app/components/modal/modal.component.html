@@ -1,0 +1,15 @@
+<div class="modal-background" (click)="closeModal()"></div>
+
+<div class="modal-window">
+    <h1>Редактирование профиля</h1>
+    <mat-dialog-content>
+        <mat-form-field class="field-data">
+            <mat-label>Имя пользователя</mat-label>
+            <input matInput [(ngModel)]="data" cdkFocusInitial>
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="button-container">
+        <button mat-button color="primary" (click)="dialogRef.close(data)">Сохранить</button>
+        <button mat-button color="accent" (click)="closeModal()">Отмена</button>
+    </mat-dialog-actions>
+</div>

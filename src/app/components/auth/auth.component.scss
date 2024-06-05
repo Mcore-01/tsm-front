@@ -1,0 +1,29 @@
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: #ffffff;
+    padding: 37px 80px;
+    border-radius: 30px;
+
+    text-align: center;
+    font-family: "Arial Black";
+
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 15px;
+        color: red;
+    }
+    button{
+        width: 130px;
+        height: 35px;
+        border-radius: 20px;
+        align-self: end;
+    }
+    .field-data{
+        width: 300px;
+    }
+}

@@ -1,0 +1,18 @@
+<div cdkDropListGroup>
+
+
+    @for(column of columns;track column){
+        <div class="example-container">
+            <div
+                    cdkDropList
+                    [cdkDropListData]="column"
+                    class="example-list"
+                    cdkDropListSortingDisabled
+                    (cdkDropListDropped)="drop($event, column.length)">
+                @for (item of column; track item) {
+                    <div class="example-box" cdkDrag>{{item.description}}</div>
+                }
+            </div>
+        </div>
+    }
+</div>

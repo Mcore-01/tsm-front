@@ -1,0 +1,17 @@
+
+<main>
+    <div class="board-header">
+        <div class="board-title">
+            <h1 *ngIf="!isBoardEdited" (click)="showEditField()">{{currentBoard.title}}</h1>
+            <app-update-board *ngIf="isBoardEdited" [board]="currentBoard" (buttonCloseClick)="hideEditField()"></app-update-board>
+        </div>
+
+        <button class="delete-board" (click)="deleteBoard(board.id)"><icon [iconUrl]="iconUrlTrash" [width]="25" [height]="25"></icon></button>
+    </div>
+    <div *ngIf="isColumnsVisible" class="columns-container">
+        @for(column of columns; track column){
+            <column [column]="column" (buttonDeleteClick)="deleteColumn(column.id)"></column>
+        }
+        <add-column [board]="currentBoard.id" (buttonAddClick)="addColumn($event)"></add-column>
+    </div>
+</main>

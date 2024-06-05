@@ -1,0 +1,75 @@
+h2{
+    color: black;
+    font-size: 26px;
+    font-family: Calibri;
+}
+.column-container{
+    width: 20vw;
+    background-color: rgba(232, 225, 225, 1);
+    padding: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+}
+.todos-container{
+    display: flex;
+    flex-direction: column;
+}
+.todo{
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 10px;
+    padding: 20px;
+
+    color: black;
+    font-size: 20px;
+    font-family: Calibri;
+}
+
+.add-todo-container{
+    display: flex;
+    flex-direction: column;
+}
+.add-button{
+    background-color: rgba(232, 225, 225, 1);
+    border-style: none;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.todo-container{
+    position: relative;
+    margin: 10px 0;
+}
+
+.delete-todo{
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    padding: 2px;
+}
+.delete-todo:hover{
+    background-color: #deb9b9;
+    border-radius: 5px;
+}
+.todo-container:hover .delete-todo{
+    opacity: 1;
+    border-style: none;
+}
+
+.delete-column{
+    opacity: 0;
+}
+.title-column{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-column:hover .delete-column{
+    opacity: 1;
+}

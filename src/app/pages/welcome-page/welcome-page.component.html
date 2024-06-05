@@ -1,0 +1,17 @@
+<header>
+    <h1>TodoProject</h1>
+    @if(userAuthorized){
+        <a routerLink="/main" routerLinkActive="active">Перейти к вашим доскам</a>
+    } @else {
+        <a routerLink="/enter/auth" routerLinkActive="active">Войти</a>
+    }
+</header>
+<main>
+    <div class="info-about-service">
+        <h2>Зарегистрируйтесь, чтобы создать свою доску</h2>
+        <div class="auth-buttons">
+            <button class="reg-button" (click)="openRegPage()">Регистрация</button>
+            <a routerLink="/enter/auth" routerLinkActive="active">Уже есть аккаунт?</a>
+        </div>
+    </div>
+</main>
